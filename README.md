@@ -37,8 +37,6 @@ The objective was to replicate two foundational papers:
 
 ## 📂 Repository Structure
 
-## 📂 Repository Structure
-
 ```
 deep-protein-modeling-progen-prottrans/
 ├── Base Research Papers/
