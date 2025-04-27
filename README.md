@@ -37,19 +37,37 @@ The objective was to replicate two foundational papers:
 
 ## 📂 Repository Structure
 
+## 📂 Repository Structure
+
+```
 deep-protein-modeling-progen-prottrans/
 ├── Base Research Papers/
 │   ├── progen_paper.pdf
 │   └── prottrans_paper.pdf
 │
 ├── Plots/
-│   ├── progen_secondary_structure_accuracy_conditioning_tags.png
-│   ├── progen_conformational_energies_mutations.png
-│   ├── progen2_generated_sequence_loglikelihood.png
-│   ├── prottrans_confusion_matrix_localization.png
-│   ├── prottrans_cosine_similarity_embeddings.png
-│   ├── prottrans_pca_projection_embeddings.png
-│   └── prottrans_umap_projection_embeddings.png
+│   ├── Python Notebook Plots/
+│   │   ├── ProGen/
+│   │   │   ├── progen_secondary_structure_accuracy_conditioning_tags.png
+│   │   │   ├── progen_conformational_energies_mutations.png
+│   │   │   ├── progen_generated_sequence_loglikelihood.png
+│   │   ├── ProtTrans/
+│   │       ├── prottrans_confusion_matrix_localization.png
+│   │       ├── prottrans_cosine_similarity_embeddings.png
+│   │       ├── prottrans_pca_projection_embeddings.png
+│   │       ├── prottrans_umap_projection_embeddings.png
+│
+│   ├── R Plots/
+│   │   ├── ProGen/
+│   │   │   ├── Rplotprogen_sequence_clustering.png
+│   │   │   ├── progen_log_likelihood_scores.png
+│   │   │   ├── progen_secondary_structure_accuracy.png
+│   │   │   ├── progen_sequence_similarity_histogram.png
+│   │   ├── ProtTrans/
+│   │       ├── prottrans_confusion_matrix.png
+│   │       ├── prottrans_cosine_similarity_heatmap.png
+│   │       ├── prottrans_tsne_embeddings.png
+│   │       ├── prottrans_umap_embeddings.png
 │
 ├── Final Project Presentation.pptx
 ├── Final Project Report.pdf
@@ -58,44 +76,42 @@ deep-protein-modeling-progen-prottrans/
 ├── ProtTrans Implementation.ipynb
 ├── README.md
 ├── YouTube Video Link.txt
-
-
----
+```
 
 ## 📈 Key Plots and Visualizations
 
-### ProGen Model
+### ProGen Model (Python Notebook Plots)
 
 #### Secondary-Structure Accuracy vs Conditioning Tags
-![Secondary Structure Accuracy](Plots/progen_secondary_structure_accuracy_conditioning_tags.png)
+![Secondary Structure Accuracy](Plots/Python%20Notebook%20Plots/ProGen/progen_secondary_structure_accuracy_conditioning_tags.png)
 > Accuracy improves with more conditioning tags used in ProGen sequence generation.
 
 #### Conformational Energies: ProGen vs Mutation Baselines
-![Conformational Energies](Plots/progen_conformational_energies_mutations.png)
+![Conformational Energies](Plots/Python%20Notebook%20Plots/ProGen/progen_conformational_energies_mutations.png)
 > Boxplot comparing conformational energy deviations across different mutation baselines.
 
 #### Log-Likelihood Scores of Generated Sequences
-![Log-Likelihood Scores](Plots/progen2_generated_sequence_loglikelihood.png)
+![Log-Likelihood Scores](Plots/Python%20Notebook%20Plots/ProGen/progen_generated_sequence_loglikelihood.png)
 > Log-likelihood distribution across generated sequences showing plausibility levels.
 
 ---
 
-### ProtTrans Model
+### ProtTrans Model (Python Notebook Plots)
 
 #### Confusion Matrix: Protein Localization Prediction
-![Confusion Matrix Localization](Plots/prottrans_confusion_matrix_localization.png)
+![Confusion Matrix Localization](Plots/Python%20Notebook%20Plots/ProtTrans/prottrans_confusion_matrix_localization.png)
 > Confusion matrix showing classification performance based on embeddings.
 
 #### Cosine Similarity Heatmap of Embeddings
-![Cosine Similarity Heatmap](Plots/prottrans_cosine_similarity_embeddings.png)
+![Cosine Similarity Heatmap](Plots/Python%20Notebook%20Plots/ProtTrans/prottrans_cosine_similarity_embeddings.png)
 > Cosine similarity visualization between protein embeddings extracted using ProtTrans.
 
 #### PCA Projection of Protein Embeddings
-![PCA Projection](Plots/prottrans_pca_projection_embeddings.png)
+![PCA Projection](Plots/Python%20Notebook%20Plots/ProtTrans/prottrans_pca_projection_embeddings.png)
 > PCA projection showing separation of protein classes based on embeddings.
 
 #### UMAP Projection of Protein Embeddings
-![UMAP Projection](Plots/prottrans_umap_projection_embeddings.png)
+![UMAP Projection](Plots/Python%20Notebook%20Plots/ProtTrans/prottrans_umap_projection_embeddings.png)
 > UMAP projection illustrating tighter neighborhood structures among protein classes.
 
 ---
@@ -106,7 +122,7 @@ deep-protein-modeling-progen-prottrans/
 2. Open the `.ipynb` notebooks in Google Colab.
 3. Ensure GPU runtime is enabled (Runtime > Change runtime type > GPU).
 4. Run all cells to reproduce sequence generation, embedding extraction, clustering, and evaluation.
-5. Refer to the `/Plots` folder for all visualizations.
+5. Refer to the `/Plots/` folder for all visualizations.
 
 ---
 
